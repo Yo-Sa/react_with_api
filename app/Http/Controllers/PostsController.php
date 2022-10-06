@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,6 +28,7 @@ class PostController extends Controller
     {
         $post = new Post([
             'title' => $request->get('title'),
+            // 'body' => $request->get('body'),
         ]);
         $post->save();
         return $post;
