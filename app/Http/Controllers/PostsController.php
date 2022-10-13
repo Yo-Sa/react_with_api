@@ -33,4 +33,15 @@ class PostsController extends Controller
         $post->save();
         return $post;
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Post  $post
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Post $post)
+    {
+        return $post;
+    }
 }

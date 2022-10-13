@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 Route::middleware(['api','cors'])->group(function () {
     Route::get('/posts', 'PostsController@index');
+    Route::get('/posts/{post}', 'PostsController@show');
     Route::post('/posts', 'PostsController@store');
     Route::get('sample', function () { echo 'sample api'; });
 });
